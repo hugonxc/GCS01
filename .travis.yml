@@ -1,7 +1,6 @@
 language: python
-
-python:
-  - "3.5"
+  python:
+    - '3.5'
 
 before_install:
   - sudo apt-get update
@@ -16,3 +15,9 @@ before_script:
 script:
   - python manage.py test
   - flake8 --exclude polls/migrations/,manage.py  .
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: o9/PaDJG331YL47IKMJ/rUmCcl67KXao24U5s9YE1eImE6K8wk5+tAM1mIQlofrd4DENW1b1zLeewXL2bWbx44OE7UtL52PsUevPfbFmFWDxjv8sY1ze0dYwvTJgw0EaQsFBQ89twBong7tH2OL+mCQlABKGbD2FrDVtXeFSQWpa7uHFL/7hZhh4mhCrObIIjDcA0xjKKMiUPpNHIxtLrBBsazb0zBqchy8l8OgdfddM0A0VcByhDl24CRaj0tXuK+BaXUQRLm9l/rA+SLgyO7geKi9Bpi7CpQe70FgLQjVvVgnhsadm8c77zD/m5qd0bhwzkmWnpnRjMnJhUudTxcUW/9DJ3d51BFS/zV98R9E37S+NQFmoKncLY2q7nyMybxvMhR+i5iOr6qDoIY9xNVxRBj0S4baiFrf8SV9k9x4QVx60aEf7DwQsEPq+QkMsAGDlsJ+Wlsrr72JE5PLSO8ao3BxShkOXD+N4fNFPEwz6LYaMG5W+dFsgaL+/mcl2uWXgBHSZvbPk5bpZFY53EZEPZ8C17eNJQRz4dViAZxjHpghAzbbZB5pwIHTQZGudP/v/brohHP01ux550oU4t5S0Ti5A1fhzSUH91ejgS8niJuA+vesEH/q8UqKLpwX6+OVua8+KA2zaVjQ8YmiJuGMQp0gp/uLolNgAh/0ihKY=
+  app: gcs01-hugocarvalho-travis
