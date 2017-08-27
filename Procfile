@@ -1,1 +1,1 @@
-web: gunicorn gcs01-hugocarvalho-travis:app --log-file -
+web: gunicorn djangobasico:app --log-file -
