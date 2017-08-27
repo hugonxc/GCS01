@@ -1,1 +1,1 @@
-web: gunicorn gettingstarted.wsgi --log-file -
+web: gunicorn gcs01-hugocarvalho-travis.wsgi --log-file -
