@@ -52,10 +52,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'djangobasico.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['djangobasico/templates/', 'polls/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
