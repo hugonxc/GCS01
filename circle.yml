@@ -1,0 +1,21 @@
+machine:
+  timezone:
+    America/Sao_Paulo
+
+dependencies:
+  pre:
+    - pip install -r requirements.txt
+  override:
+    - python manage.py migrate
+
+test:
+  pre:
+    - python manage.py test
+  override:
+    - flake8 --exclude polls/migrations/,manage.py  .
+
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: gcs01-hugocarvalho-travis
